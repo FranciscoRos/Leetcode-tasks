@@ -1,3 +1,13 @@
+/*
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+ */
+
+import java.util.Map;
+import java.util.HashMap;
 class twoSum {
     public int[] twoSum(int[] nums, int target) {
         for(int i=0;  i< nums.length; i++){
@@ -10,5 +20,11 @@ class twoSum {
 
         }
         return null;
+    }
+
+    //This version works with map, we´re looking for a O(log n) time difficulty
+    public int[] twoSum2(int[] nums, int target) {
+        map numeros =new map(nums);
+        return new int [0];
     }
 }

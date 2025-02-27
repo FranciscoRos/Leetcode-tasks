@@ -27,4 +27,10 @@ public class RemoveElement {
 
         return contadorDiferentes;
     }
+    //This version works with map, we´re looking for a O(log n) time difficulty
+    public int removeElementV2(int[] nums, int val) {
+
+
+    return 0;
+    }
 }
