@@ -22,9 +22,16 @@ class twoSum {
         return null;
     }
 
-    //This version works with map, we´re looking for a O(log n) time difficulty
+    //This version works with map, we´re looking for a O(n) time difficulty
     public int[] twoSum2(int[] nums, int target) {
-        map numeros =new map(nums);
+        Map<Integer,Integer> diccNumeros =new HashMap<>();
+        for (int i=0;i<nums.length;i++){
+            int complementoSuma = target -nums[i];
+            if(diccNumeros.containsKey(complementoSuma)){
+                return new int[] {i,diccNumeros.get(complementoSuma)};
+            }
+            diccNumeros.put(nums[i],i);
+        }
         return new int [0];
     }
 }
